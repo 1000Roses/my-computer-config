@@ -14,3 +14,20 @@ this is just no my nvim, this is my whole config in computer
   - :PackerSync
 # custom vscode
 # custom pycharm
+# map key
+  - terminator
+    - ctrl + tab: go to next tab
+    - ctrl + shift + tab: go to previous tab
+    - ctrl + w: close current tab
+ - nvim
+   <leader> assign to space
+    - <leader> sv: split window vertically
+    - <leader> sh: split window horizontally
+    - <leader> se: make split windows equal width
+    - <leader> sx: close current split window
+    - <leader> ff: telescope find_files
+    - <leader> fs: telescope live_grep
+    - <leader> fc: telescope grep_string
+    - <leader> fb: telescope buffers
+    - <leader> fh: telescope help_tags
+    - ctrl + t: open terminal
