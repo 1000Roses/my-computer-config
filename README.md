@@ -1,6 +1,6 @@
 this is just no my nvim, this is my whole config in computer
 # custom font (mint linux)
-- download font file with .tff exten sion, search [nerdfont](https://www.nerdfonts.com/font-downloads) to download
+- download font file with .tff extension, search [nerdfont](https://www.nerdfonts.com/font-downloads) to download
 - copy all file *.tff to font custom to specific system folder linux ```sudo mv *.ttf ~/.local/share/fonts```
 - go to setting, search font application to set added font, note
   - "Monospace font" for terminal
