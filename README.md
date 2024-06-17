@@ -14,6 +14,7 @@ this is just no my nvim, this is my whole config in computer
   - :PackerSync
 # custom vscode
 # custom pycharm
+- install neovim + config in ~/.ideavimrc "imap jk <Esc>"
 # map key
   - terminator
     - ctrl + tab: go to next tab
