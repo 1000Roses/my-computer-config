@@ -12,6 +12,7 @@ this is just no my nvim, this is my whole config in computer
 - install rg: sudo apt-get install ripgrep
 - some errors happen
   - prettier not found: npm install -g prettier
+  - install lsp not work: then MasonInstall --force name_of_package
 - file lua located in ~/.config/nvim
 - install packages in nvim using packer management
   - :PackerInstall
