@@ -7,6 +7,11 @@ this is just no my nvim, this is my whole config in computer
   - "Desktop font" for font outside desktop
   - "Default font" for in which set default font such like: chrome,..
 # custom vim - using neovim
+- install lastest nvim: recommend using snap, not using ppa
+- install fd: sudo apt install fd-find
+- install rg: sudo apt-get install ripgrep
+- some errors happen
+  - prettier not found: npm install -g prettier
 - file lua located in ~/.config/nvim
 - install packages in nvim using packer management
   - :PackerInstall
