@@ -104,6 +104,12 @@ return packer.startup(function(use)
 	-- toggleterm
 	use("akinsho/toggleterm.nvim")
 
+	-- autosave
+	use("Pocco81/auto-save.nvim")
+
+	-- vim-visual-multi
+	use("mg979/vim-visual-multi")
+
 	-- Debugging
 
 	if packer_bootstrap then

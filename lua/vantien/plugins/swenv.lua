@@ -4,7 +4,7 @@ if not setup then
 	return
 end
 
-€ý,€ý,-- swenv.setup({
+-- swenv.setup({
 -- 	-- Should return a list of tables with a `name` and a `path` entry each.
 -- 	-- Gets the argument `venvs_path` set below.
 -- 	-- By default just lists the entries in `venvs_path`.
@@ -17,9 +17,8 @@ end
 -- 	post_set_venv = nil,
 -- })
 
-
 swenv.setup({
-  post_set_venv = function(venv)
-    vim.cmd('LspRestart')
-  end,
+	post_set_venv = function(venv)
+		vim.cmd("LspRestart")
+	end,
 })
