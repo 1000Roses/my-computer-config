@@ -10,6 +10,7 @@ this is just no my nvim, this is my whole config in computer
 ## window
 - download font file and click to font downloaded to install
 - in terminal -> setting -> which terminal i want -> apperance -> font face -> font i want
+- then restart 
 # custom vim - using neovim
  requirement:
  - install node v16
