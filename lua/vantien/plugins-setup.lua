@@ -26,7 +26,9 @@ end
 
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
-	use("bluz71/vim-nightfly-guicolors") --  preferred colorscheme
+	-- use("bluz71/vim-nightfly-guicolors") --  preferred colorscheme
+	use({ "catppuccin/nvim", as = "cappuccin" }) --  preferred colorscheme
+
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
 	use("szw/vim-maximizer")

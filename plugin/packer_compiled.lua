@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/vantien/.local/share/nvim/site/pack/packer/start/auto-save.nvim",
     url = "https://github.com/Pocco81/auto-save.nvim"
   },
+  cappuccin = {
+    loaded = true,
+    path = "/home/vantien/.local/share/nvim/site/pack/packer/start/cappuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/vantien/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -245,11 +250,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/vantien/.local/share/nvim/site/pack/packer/start/vim-maximizer",
     url = "https://github.com/szw/vim-maximizer"
-  },
-  ["vim-nightfly-guicolors"] = {
-    loaded = true,
-    path = "/home/vantien/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
-    url = "https://github.com/bluz71/vim-nightfly-guicolors"
   },
   ["vim-surround"] = {
     loaded = true,
