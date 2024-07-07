@@ -42,6 +42,7 @@ this is just no my nvim, this is my whole config in computer
     - <leader> fb: telescope buffers
     - <leader> fh: telescope help_tags
     - ctrl + t: open terminal
+## check bug: :checkhealth
 # custom vscode
 ## in open_keyboard_shortcut (JSON)
 ```
