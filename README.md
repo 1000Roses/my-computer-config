@@ -1,11 +1,15 @@
 this is just no my nvim, this is my whole config in computer
-# custom font (mint linux)
+# custom font 
+## mint linux
 - download font file with .tff extension, search [nerdfont](https://www.nerdfonts.com/font-downloads) to download
 - copy all file *.tff to font custom to specific system folder linux ```sudo mv *.ttf ~/.local/share/fonts```
 - go to setting, search font application to set added font, note (hình như không cần cài nerdfont thì phải)
   - "Monospace font" for terminal
   - "Desktop font" for font outside desktop
   - "Default font" for in which set default font such like: chrome,..
+## window
+- download font file and click to font downloaded to install
+- in terminal -> setting -> which terminal i want -> apperance -> font face -> font i want
 # custom vim - using neovim
  requirement:
  - install node v16
