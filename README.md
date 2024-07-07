@@ -20,6 +20,23 @@ this is just no my nvim, this is my whole config in computer
   - :PackerInstall
   - :PackerCompile
   - :PackerSync
+## map key
+  - terminator
+    - ctrl + tab: go to next tab
+    - ctrl + shift + tab: go to previous tab
+    - ctrl + w: close current tab
+ - nvim
+   <leader> assign to space
+    - <leader> sv: split window vertically
+    - <leader> sh: split window horizontally
+    - <leader> se: make split windows equal width
+    - <leader> sx: close current split window
+    - <leader> ff: telescope find_files
+    - <leader> fs: telescope live_grep
+    - <leader> fc: telescope grep_string
+    - <leader> fb: telescope buffers
+    - <leader> fh: telescope help_tags
+    - ctrl + t: open terminal
 # custom vscode
 ## in open_keyboard_shortcut (JSON)
 ```
@@ -68,20 +85,4 @@ this is just no my nvim, this is my whole config in computer
 ```
 # custom pycharm
 - install neovim + config in ~/.ideavimrc "imap jk <Esc>"
-# map key
-  - terminator
-    - ctrl + tab: go to next tab
-    - ctrl + shift + tab: go to previous tab
-    - ctrl + w: close current tab
- - nvim
-   <leader> assign to space
-    - <leader> sv: split window vertically
-    - <leader> sh: split window horizontally
-    - <leader> se: make split windows equal width
-    - <leader> sx: close current split window
-    - <leader> ff: telescope find_files
-    - <leader> fs: telescope live_grep
-    - <leader> fc: telescope grep_string
-    - <leader> fb: telescope buffers
-    - <leader> fh: telescope help_tags
-    - ctrl + t: open terminal
+
