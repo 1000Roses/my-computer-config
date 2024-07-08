@@ -13,7 +13,7 @@ this is just no my nvim, this is my whole config in computer
 - then restart 
 # custom vim - using neovim
  requirement:
- - install node v16
+- install node v16
 - install lastest nvim: recommend using snap, not using ppa
 - install fd: sudo apt install fd-find
 - install rg: sudo apt-get install ripgrep
@@ -25,6 +25,8 @@ this is just no my nvim, this is my whole config in computer
   - :PackerInstall
   - :PackerCompile
   - :PackerSync
+# keep remember install 
+  - 
 ## map key
   - terminator
     - ctrl + tab: go to next tab
