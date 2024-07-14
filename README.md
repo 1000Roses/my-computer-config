@@ -1,5 +1,10 @@
 this is just no my nvim, this is my whole config in computer
 # custom font 
+from the infor that i have found on internet, nerd font is the patched font, but i dont know patched font mean, just update origin font with a lot of features and icons ? if so, then patched font is updated of origin font and called font with more features - but called patched font, and origin font is the just font.
+so i consider font and patched font is the same, patched font is such like v2, v3 and more of origin font
+there 2 fonts that suitable for me
+- ubuntu mono
+- cascadia mono, https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/CascadiaCode/Regular
 ## mint linux
 - download font file with .tff extension, search [nerdfont](https://www.nerdfonts.com/font-downloads) to download
 - copy all file *.tff to font custom to specific system folder linux ```sudo mv *.ttf ~/.local/share/fonts```
