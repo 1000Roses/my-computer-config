@@ -22,7 +22,11 @@ there 2 fonts that suitable for me
 - install lastest nvim: recommend using snap, not using ppa
 - install fd: sudo apt install fd-find
 - install rg: sudo apt-get install ripgrep
-- install dlv for golang debug
+- install dlv for golang debug: 
+```
+# Install the latest release:
+$ go install github.com/go-delve/delve/cmd/dlv@latest
+```
 - some errors happen
   - prettier not found: npm install -g prettier
   - install lsp not work: then MasonInstall --force name_of_package
