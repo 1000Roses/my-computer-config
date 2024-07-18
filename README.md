@@ -31,6 +31,8 @@ $ go install github.com/go-delve/delve/cmd/dlv@latest
   - prettier not found: npm install -g prettier
   - install lsp not work: then MasonInstall --force name_of_package
   - err with debug package
+    - debug for dap: :DapShowLog
+    - in incase run server err, then run debug err too :))
     - Golang
         - check terminal "which dlv", if display path then ok, nothing is not set path dlv in golang bin not in system path
           - set path in ~/.bashrc:
