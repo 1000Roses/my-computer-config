@@ -111,9 +111,20 @@ return packer.startup(function(use)
 
 	-- vim-visual-multi
 	use("mg979/vim-visual-multi")
+	-- -- bar line
+	-- use("romgrk/barbar.nvim")
+	-- statusline
+	use("beauwilliams/statusline.lua")
 
 	-- Debugging
-
+	use({
+		"mfussenegger/nvim-dap",
+		requires = {
+			"rcarriga/nvim-dap-ui",
+			"leoluz/nvim-dap-go",
+			"nvim-neotest/nvim-nio", -- nvim-dap-ui need nvim-nio
+		},
+	})
 	if packer_bootstrap then
 		require("packer").sync()
 	end
