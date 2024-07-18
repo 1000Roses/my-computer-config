@@ -22,9 +22,21 @@ there 2 fonts that suitable for me
 - install lastest nvim: recommend using snap, not using ppa
 - install fd: sudo apt install fd-find
 - install rg: sudo apt-get install ripgrep
+- install dlv for golang debug
 - some errors happen
   - prettier not found: npm install -g prettier
   - install lsp not work: then MasonInstall --force name_of_package
+  - err with debug package
+    - Golang
+        - check terminal "which dlv", if display path then ok, nothing is not set path dlv in golang bin not in system path
+          - set path in ~/.bashrc:
+            ```
+              export GOPATH="$HOME/go"
+              export GOBIN="$GOPATH/bin"
+              export PATH="$PATH:$GOBIN"
+            ```
+            export PATH="$PATH:$GOBIN" mean append path GOBIN in PATH
+            then run "source ~/.bashrc" to update
 - file lua located in ~/.config/nvim
 - install packages in nvim using packer management
   - :PackerInstall
