@@ -111,8 +111,8 @@ return packer.startup(function(use)
 
 	-- vim-visual-multi
 	use("mg979/vim-visual-multi")
-	-- -- bar line
-	-- use("romgrk/barbar.nvim")
+	-- trouble
+	use({ "folke/trouble.nvim", requires = { "folke/todo-comments.nvim" } })
 	-- statusline
 	use("beauwilliams/statusline.lua")
 
