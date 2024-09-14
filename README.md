@@ -12,6 +12,12 @@ there 2 fonts that suitable for me
   - "Monospace font" for terminal
   - "Desktop font" for font outside desktop
   - "Default font" for in which set default font such like: chrome,..
+## macos
+- im using oh-my-posh haha to custom in the shell
+- install using brew: brew install jandedobbeleer/oh-my-posh/oh-my-posh
+- install font i also using brew: https://ohmyposh.dev/docs/installation/fonts
+- make color hightlight dir and something etc: https://ohmyposh.dev/docs/installation/prompt ($TERM_PROGRAM" in default terminal is "Apple_Terminal")
+- config by adding in file ~/.zshrc that theme i want, google https://ohmyposh.dev/docs/installation/customize to how to know add, and google https://ohmyposh.dev/docs/themes for which theme to get
 ## window
 - download font file and click to font downloaded to install
 - in terminal -> setting -> which terminal i want -> apperance -> font face -> font i want
