@@ -93,6 +93,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
+	use("tpope/vim-fugitive")
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
@@ -125,6 +126,22 @@ return packer.startup(function(use)
 			"nvim-neotest/nvim-nio", -- nvim-dap-ui need nvim-nio
 		},
 	})
+
+	-- Add Avante/Claude integration
+	use({
+		"yetone/avante.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+			"zbirenbaum/copilot.lua",
+			"HakonHarnes/img-clip.nvim",
+			"MeanderingProgrammer/render-markdown.nvim",
+		},
+		config = function()
+			require("vantien.plugins.avante")
+		end,
+	})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
