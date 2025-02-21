@@ -31,3 +31,8 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
+
+-- git
+keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
+keymap.set("n", "<leader>gb", ":Gitsigns blame_line<CR>", {})
+keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
