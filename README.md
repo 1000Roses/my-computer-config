@@ -78,10 +78,25 @@ $ go install github.com/go-delve/delve/cmd/dlv@latest
 ## in open_keyboard_shortcut (JSON)
 ```
 // Place your key bindings in this file to override the defaults
+// Place your key bindings in this file to override the defaults
 [
+    {
+        "key": "ctrl+n",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
     {
         "key": "ctrl+g",
         "command": "editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus"
+    },
+    {
+        "key": "ctrl+f12",
+        "command": "-editor.action.goToImplementation",
         "when": "editorHasImplementationProvider && editorTextFocus"
     },
     {
@@ -99,18 +114,84 @@ $ go install github.com/go-delve/delve/cmd/dlv@latest
     {
         "key": "ctrl+j",
         "command": "workbench.action.navigateDown"
-    }
+    },
+    // Terminal Toggle
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    // Override the default Ctrl+T behavior (new tab)
+    {
+        "key": "ctrl+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
+    // Explorer Navigation
+    
+    // Other Explorer → Editor (use Alt+L)
+    // Editor → Explorer (Use Alt+H instead of Ctrl+H)
+    {
+        "key": "alt+h",
+        "command": "workbench.view.explorer",
+        "when": "editorFocus"
+    },
+   
 ]
 ```
 ## in open_user_settings (JSON)
 ```
 {
-    "vim.insertModeKeyBindings": [
+     "vim.insertModeKeyBindingsNonRecursive": [
         {
-            "before": ["j", "k"],
-            "after": ["<Esc>"]
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<esc>"
+            ]
         }
     ],
+    "editor.multiCursorModifier": "ctrlCmd",
+    "vim.useSystemClipboard": true,
+    "vim.leader": "<space>",
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["<C-n>"],
+            "after": ["g", "b"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-n>"],
+            "commands": ["editor.action.addSelectionToNextFindMatch"]
+        },
+        {
+            "before": ["<C-S-n>"],
+            "commands": ["editor.action.selectHighlights"]
+        },
+        {
+            "before": ["<leader>", "s", "v"],
+            "commands": ["workbench.action.splitEditorRight"]
+        },
+        {
+            "before": ["<leader>", "s", "h"],
+            "commands": ["workbench.action.splitEditorDown"]
+        },
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-n>": false,
+        "<C-f>": false
+    },
     "files.autoSave": "afterDelay",
     "git.enableSmartCommit": true,
     "security.workspace.trust.untrustedFiles": "open",
