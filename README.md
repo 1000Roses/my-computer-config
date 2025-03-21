@@ -79,7 +79,32 @@ $ go install github.com/go-delve/delve/cmd/dlv@latest
 ```
 // Place your key bindings in this file to override the defaults
 // Place your key bindings in this file to override the defaults
+// Place your key bindings in this file to override the defaults
 [
+    {
+        "key": "ctrl+i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor"
+    },
+    {
+        "key": "shift+f12",
+        "command": "-editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
     {
         "key": "ctrl+n",
         "command": "editor.action.addSelectionToNextFindMatch",
@@ -91,7 +116,7 @@ $ go install github.com/go-delve/delve/cmd/dlv@latest
     },
     {
         "key": "ctrl+g",
-        "command": "editor.action.goToImplementation",
+        "command": "-editor.action.goToImplementation",
         "when": "editorHasImplementationProvider && editorTextFocus"
     },
     {
@@ -146,7 +171,7 @@ $ go install github.com/go-delve/delve/cmd/dlv@latest
 ## in open_user_settings (JSON)
 ```
 {
-     "vim.insertModeKeyBindingsNonRecursive": [
+    "vim.insertModeKeyBindingsNonRecursive": [
         {
             "before": [
                 "j",
@@ -186,6 +211,14 @@ $ go install github.com/go-delve/delve/cmd/dlv@latest
         {
             "before": ["<leader>", "e"],
             "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+            "before": ["<leader>", "f", "f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["<leader>", "f", "s"],
+            "commands": ["workbench.action.findInFiles"]
         }
     ],
     "vim.handleKeys": {
@@ -193,12 +226,26 @@ $ go install github.com/go-delve/delve/cmd/dlv@latest
         "<C-f>": false
     },
     "files.autoSave": "afterDelay",
-    "git.enableSmartCommit": true,
-    "security.workspace.trust.untrustedFiles": "open",
-    "workbench.colorTheme": "mojo",
-    "cloudcode.duetAI.project": "vantien-703b7",
-    "go.toolsManagement.autoUpdate": true
     
+    // Code indexing settings
+    "search.followSymlinks": true,
+    "search.useGlobalIgnoreFiles": true,
+    "search.useIgnoreFiles": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": false,
+        "**/dist": false
+    },
+    "editor.semanticHighlighting.enabled": true,
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true
+    },
+    "ai.cursor.enableInlineCompletion": true,
+    "ai.cursor.enableInlineMap": true
 }
 ```
 # custom pycharm
