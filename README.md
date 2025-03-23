@@ -170,83 +170,92 @@ $ go install github.com/go-delve/delve/cmd/dlv@latest
 ```
 ## in open_user_settings (JSON)
 ```
-{
-    "vim.insertModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<esc>"
-            ]
-        }
-    ],
-    "editor.multiCursorModifier": "ctrlCmd",
-    "vim.useSystemClipboard": true,
-    "vim.leader": "<space>",
-    "vim.visualModeKeyBindings": [
-        {
-            "before": ["<C-n>"],
-            "after": ["g", "b"]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["<C-n>"],
-            "commands": ["editor.action.addSelectionToNextFindMatch"]
-        },
-        {
-            "before": ["<C-S-n>"],
-            "commands": ["editor.action.selectHighlights"]
-        },
-        {
-            "before": ["<leader>", "s", "v"],
-            "commands": ["workbench.action.splitEditorRight"]
-        },
-        {
-            "before": ["<leader>", "s", "h"],
-            "commands": ["workbench.action.splitEditorDown"]
-        },
-        {
-            "before": ["<leader>", "e"],
-            "commands": ["workbench.action.toggleSidebarVisibility"]
-        },
-        {
-            "before": ["<leader>", "f", "f"],
-            "commands": ["workbench.action.quickOpen"]
-        },
-        {
-            "before": ["<leader>", "f", "s"],
-            "commands": ["workbench.action.findInFiles"]
-        }
-    ],
-    "vim.handleKeys": {
-        "<C-n>": false,
-        "<C-f>": false
+    {
+        "key": "ctrl+i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus"
     },
-    "files.autoSave": "afterDelay",
+    {
+        "key": "ctrl+i",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor"
+    },
+    {
+        "key": "shift+f12",
+        "command": "-editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus"
+    },
+    {
+        "key": "ctrl+f12",
+        "command": "-editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.navigateDown"
+    },
+    // Terminal Toggle
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    // Override the default Ctrl+T behavior (new tab)
+    {
+        "key": "ctrl+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
+    // Explorer Navigation
     
-    // Code indexing settings
-    "search.followSymlinks": true,
-    "search.useGlobalIgnoreFiles": true,
-    "search.useIgnoreFiles": true,
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/node_modules": false,
-        "**/dist": false
+    // Other Explorer → Editor (use Alt+L)
+    // Editor → Explorer (Use Alt+H instead of Ctrl+H)
+    {
+        "key": "alt+h",
+        "command": "workbench.view.explorer",
+        "when": "editorFocus"
     },
-    "editor.semanticHighlighting.enabled": true,
-    "editor.semanticTokenColorCustomizations": {
-        "enabled": true
-    },
-    "ai.cursor.enableInlineCompletion": true,
-    "ai.cursor.enableInlineMap": true
-}
+   
+]
 ```
 # custom pycharm
 - install neovim + config in ~/.ideavimrc "imap jk <Esc>"
