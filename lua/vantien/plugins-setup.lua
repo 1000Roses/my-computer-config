@@ -59,7 +59,7 @@ return packer.startup(function(use)
     use("onsails/lspkind-nvim")
 
     -- managing & installing lsp servers
-    use("williamboman/mason.nvim")        -- in charge of managing lsp servers, linters & formatters
+    use("williamboman/mason.nvim")           -- in charge of managing lsp servers, linters & formatters
     use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
 
     -- configuring lsp servers
@@ -72,9 +72,9 @@ return packer.startup(function(use)
             { "nvim-tree/nvim-web-devicons" },
             { "nvim-treesitter/nvim-treesitter" },
         },
-    })                                     -- enhanced lsp uis
+    })                                        -- enhanced lsp uis
     use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
-    use("onsails/lspkind.nvim")            -- vs-code like icons for autocompletion
+    use("onsails/lspkind.nvim")               -- vs-code like icons for autocompletion
 
     -- formatting & linting
     use('nvimtools/none-ls.nvim')
@@ -90,7 +90,7 @@ return packer.startup(function(use)
     })
 
     -- auto closing
-    use("windwp/nvim-autopairs")                              -- autoclose parens, brackets, quotes, etc...
+    use("windwp/nvim-autopairs")                                 -- autoclose parens, brackets, quotes, etc...
     use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
     use("tpope/vim-fugitive")
@@ -127,21 +127,68 @@ return packer.startup(function(use)
         },
     })
 
-    -- Add Avante/Claude integration
+    -- Code company
     use({
-        "yetone/avante.nvim",
+        "olimorris/codecompanion.nvim",
+        config = function()
+            require("codecompanion").setup({
+                adapters = {
+                    deepseek = function()
+                        return require("codecompanion.adapters").extend("deepseek", {
+                            env = {
+                                api_key = "sk-f13bb02cab834d7e8639e6387a83ae79"
+                            },
+                        })
+                    end,
+                },
+                strategies = {
+                    chat = {
+                        adapter = {
+                            name = "deepseek",
+                            model = "deepseek-chat"
+                        }
+                    },
+                    inline = {
+                        adapter = {
+                            name = "deepseek",
+                            model = "deepseek-reasoner"
+                        }
+                    },
+                    cmd = {
+                        adapter = {
+                            name = "deepseek",
+                            model = "deepseek-reasoner"
+                        }
+                    }
+                },
+                display = {
+                    chat = {
+                        intro_message = "Welcome to CodeCompanion ✨! Press ? for options",
+                        show_header_separator = false, -- Show header separators in the chat buffer? Set this to false if you're using an external markdown formatting plugin
+                        separator = "─", -- The separator between the different messages in the chat buffer
+                        show_references = true, -- Show references (from slash commands and variables) in the chat buffer?
+                        show_settings = false, -- Show LLM settings at the top of the chat buffer?
+                        show_token_count = true, -- Show the token count for each response?
+                        start_in_insert_mode = false, -- Open the chat buffer in insert mode?
+                    },
+                    action_palette = {
+                        width = 95,
+                        height = 10,
+                        prompt = "Prompt ",                   -- Prompt used for interactive LLM calls
+                        provider = "default",                 -- Can be "default", "telescope", "fzf_lua", "mini_pick" or "snacks". If not specified, the plugin will autodetect installed providers.
+                        opts = {
+                            show_default_actions = true,      -- Show the default actions in the action palette?
+                            show_default_prompt_library = true, -- Show the default prompt library in the action palette?
+                        },
+                    },
+                },
+            })
+        end,
         requires = {
             "nvim-lua/plenary.nvim",
-            "MunifTanjim/nui.nvim",
-            "zbirenbaum/copilot.lua",
-            "HakonHarnes/img-clip.nvim",
-            "MeanderingProgrammer/render-markdown.nvim",
-        },
-        config = function()
-            require("vantien.plugins.avante")
-        end,
+            "nvim-treesitter/nvim-treesitter",
+        }
     })
-
     if packer_bootstrap then
         require("packer").sync()
     end

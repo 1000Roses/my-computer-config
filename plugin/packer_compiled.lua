@@ -94,12 +94,6 @@ _G.packer_plugins = {
     path = "/Users/macos/.local/share/nvim/site/pack/packer/start/auto-save.nvim",
     url = "https://github.com/Pocco81/auto-save.nvim"
   },
-  ["avante.nvim"] = {
-    config = { "\27LJ\2\n6\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\27vantien.plugins.avante\frequire\0" },
-    loaded = true,
-    path = "/Users/macos/.local/share/nvim/site/pack/packer/start/avante.nvim",
-    url = "https://github.com/yetone/avante.nvim"
-  },
   cappuccin = {
     loaded = true,
     path = "/Users/macos/.local/share/nvim/site/pack/packer/start/cappuccin",
@@ -125,10 +119,11 @@ _G.packer_plugins = {
     path = "/Users/macos/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["copilot.lua"] = {
+  ["codecompanion.nvim"] = {
+    config = { "\27LJ\2\n•\1\0\0\5\0\a\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0005\3\5\0005\4\4\0=\4\6\3D\0\3\0\benv\1\0\1\benv\0\1\0\1\fapi_key(sk-f13bb02cab834d7e8639e6387a83ae79\rdeepseek\vextend\27codecompanion.adapters\frequire’\6\1\0\6\0\27\0!6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0003\4\3\0=\4\5\3=\3\a\0025\3\v\0005\4\t\0005\5\b\0=\5\n\4=\4\f\0035\4\14\0005\5\r\0=\5\n\4=\4\15\0035\4\17\0005\5\16\0=\5\n\4=\4\18\3=\3\19\0025\3\21\0005\4\20\0=\4\f\0035\4\22\0005\5\23\0=\5\24\4=\4\25\3=\3\26\2B\0\2\1K\0\1\0\fdisplay\19action_palette\topts\1\0\2 show_default_prompt_library\2\25show_default_actions\2\1\0\5\rprovider\fdefault\vprompt\fPrompt \vheight\3\n\nwidth\3_\topts\0\1\0\2\tchat\0\19action_palette\0\1\0\a\18show_settings\1\20show_references\2\25start_in_insert_mode\1\14separator\bâ”€\26show_header_separator\1\18intro_message6Welcome to CodeCompanion âœ¨! Press ? for options\21show_token_count\2\15strategies\bcmd\1\0\1\fadapter\0\1\0\2\nmodel\22deepseek-reasoner\tname\rdeepseek\vinline\1\0\1\fadapter\0\1\0\2\nmodel\22deepseek-reasoner\tname\rdeepseek\tchat\1\0\3\vinline\0\tchat\0\bcmd\0\fadapter\1\0\1\fadapter\0\1\0\2\nmodel\18deepseek-chat\tname\rdeepseek\radapters\1\0\3\fdisplay\0\15strategies\0\radapters\0\rdeepseek\1\0\1\rdeepseek\0\0\nsetup\18codecompanion\frequire\0" },
     loaded = true,
-    path = "/Users/macos/.local/share/nvim/site/pack/packer/start/copilot.lua",
-    url = "https://github.com/zbirenbaum/copilot.lua"
+    path = "/Users/macos/.local/share/nvim/site/pack/packer/start/codecompanion.nvim",
+    url = "https://github.com/olimorris/codecompanion.nvim"
   },
   ["dressing.nvim"] = {
     loaded = true,
@@ -144,11 +139,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/macos/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
-  ["img-clip.nvim"] = {
-    loaded = true,
-    path = "/Users/macos/.local/share/nvim/site/pack/packer/start/img-clip.nvim",
-    url = "https://github.com/HakonHarnes/img-clip.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -184,11 +174,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/macos/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
     url = "https://github.com/nvimtools/none-ls.nvim"
-  },
-  ["nui.nvim"] = {
-    loaded = true,
-    path = "/Users/macos/.local/share/nvim/site/pack/packer/start/nui.nvim",
-    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -256,11 +241,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/macos/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["render-markdown.nvim"] = {
-    loaded = true,
-    path = "/Users/macos/.local/share/nvim/site/pack/packer/start/render-markdown.nvim",
-    url = "https://github.com/MeanderingProgrammer/render-markdown.nvim"
   },
   ["statusline.lua"] = {
     loaded = true,
@@ -335,10 +315,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: avante.nvim
-time([[Config for avante.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\27vantien.plugins.avante\frequire\0", "config", "avante.nvim")
-time([[Config for avante.nvim]], false)
+-- Config for: codecompanion.nvim
+time([[Config for codecompanion.nvim]], true)
+try_loadstring("\27LJ\2\n•\1\0\0\5\0\a\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0005\3\5\0005\4\4\0=\4\6\3D\0\3\0\benv\1\0\1\benv\0\1\0\1\fapi_key(sk-f13bb02cab834d7e8639e6387a83ae79\rdeepseek\vextend\27codecompanion.adapters\frequire’\6\1\0\6\0\27\0!6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0003\4\3\0=\4\5\3=\3\a\0025\3\v\0005\4\t\0005\5\b\0=\5\n\4=\4\f\0035\4\14\0005\5\r\0=\5\n\4=\4\15\0035\4\17\0005\5\16\0=\5\n\4=\4\18\3=\3\19\0025\3\21\0005\4\20\0=\4\f\0035\4\22\0005\5\23\0=\5\24\4=\4\25\3=\3\26\2B\0\2\1K\0\1\0\fdisplay\19action_palette\topts\1\0\2 show_default_prompt_library\2\25show_default_actions\2\1\0\5\rprovider\fdefault\vprompt\fPrompt \vheight\3\n\nwidth\3_\topts\0\1\0\2\tchat\0\19action_palette\0\1\0\a\18show_settings\1\20show_references\2\25start_in_insert_mode\1\14separator\bâ”€\26show_header_separator\1\18intro_message6Welcome to CodeCompanion âœ¨! Press ? for options\21show_token_count\2\15strategies\bcmd\1\0\1\fadapter\0\1\0\2\nmodel\22deepseek-reasoner\tname\rdeepseek\vinline\1\0\1\fadapter\0\1\0\2\nmodel\22deepseek-reasoner\tname\rdeepseek\tchat\1\0\3\vinline\0\tchat\0\bcmd\0\fadapter\1\0\1\fadapter\0\1\0\2\nmodel\18deepseek-chat\tname\rdeepseek\radapters\1\0\3\fdisplay\0\15strategies\0\radapters\0\rdeepseek\1\0\1\rdeepseek\0\0\nsetup\18codecompanion\frequire\0", "config", "codecompanion.nvim")
+time([[Config for codecompanion.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]
