@@ -36,3 +36,7 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
 keymap.set("n", "<leader>gb", ":Gitsigns blame_line<CR>", {})
 keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
+
+-- ai assistant 
+keymap.set("n", "<leader>ai", ":CodeCompanionActions<CR>", { silent = true })
+keymap.set("v", "<leader>ai", ":'<,'>CodeCompanionActions<CR>", { silent = true })

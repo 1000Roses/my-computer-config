@@ -37,4 +37,5 @@ opt.splitbelow = true
 
 opt.iskeyword:append("-")
 
-
+-- ADDED VenvSelect configuration
+vim.g.venv_selector_stay_on_this_version = true
